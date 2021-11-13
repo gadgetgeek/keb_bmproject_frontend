@@ -39,7 +39,7 @@ const Show = (props) => {
       // prevent the refresh
       event.preventDefault()
       // pass the form data to updateBookmark
-      props.updatePeople(editForm, book._id)
+      props.updateBookmark(editForm, book._id)
       // redirect people back to index
       navigate("/")
     }
@@ -65,7 +65,7 @@ const Show = (props) => {
           placeholder="URL"
           onChange={handleChange}
         />
-        <input type="submit" value="Create Bookmark" />
+        <input type="submit" value="Update Bookmark" />
       </form>
     );
 
