@@ -5,9 +5,8 @@ const Index = (props) => {
 
      // state to hold form data
   const [newForm, setNewForm] = useState({
-    name: "",
+    title: "",
     url: ""
-
 })
 
 //handleChange function to sync input with state
@@ -28,7 +27,7 @@ const handleSubmit = (event) => {
     props.createBookmark(newForm)
     // reset the form to empty
     setNewForm({
-        name: "",
+        title: "",
         url: ""
   })
 }
@@ -38,7 +37,7 @@ const form = (
       <input
         type="text"
         value={newForm.name}
-        name="name"
+        name="title"
         placeholder="name"
         onChange={handleChange}
       />
@@ -60,10 +59,9 @@ const form = (
         {props.bookmark.map((bookmark) => {
           return (
             <div key={bookmark._id} className="bookmark">
-              <Link to={`/bookmark/${bookmark._id}`}>
-                <h1>{bookmark.name}</h1>
-              </Link>
-              <a href={bookmark.url} alt={bookmark.url} />
+                <a href={bookmark.url} alt={bookmark.url}>{bookmark.title}</a>
+                <span> - </span>
+                <Link to={`/bookmark/${bookmark._id}`}>Edit</Link>
             </div>
           );
         })}
