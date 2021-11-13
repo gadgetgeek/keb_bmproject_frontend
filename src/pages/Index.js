@@ -61,7 +61,7 @@ const form = (
           return (
             <div key={bookmark._id} className="bookmark">
               <Link to={`/bookmark/${bookmark._id}`}>
-                <h1>{bookmark.name}</h1>
+                <h1>{bookmark.title}</h1>
               </Link>
               <a href={bookmark.url} alt={bookmark.url} />
             </div>
