@@ -8,14 +8,10 @@ This is the frontend for the Bookmark'd App, utilizing API from the [MongoDB-Her
 - [Elikya Bokanga](https://github.com/elikyaB)
 - [Wensy DeSousa](https://github.com/wensyd)
 
-## Dependencies
-
-- React (v17.0.2)
-- React-DOM (v17.0.2)
-- React-Router-DOM (v6.0.2)
-- React Scripts (v4.0.3)
-- Sass (v1.43.4)
-- Web-Vitals (v1.1.2)
+## Technologies Used
+- HTML5
+- CSS
+- React JS
 
 ## Router Route Table
 
