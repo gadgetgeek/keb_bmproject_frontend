@@ -46,17 +46,25 @@ const Main = (props) => {
     })
     // update the list of bookmarks
     getBookmark()
-}
+  }
 
-// create function to delete a bookmark
-const deleteBookmark = async (id) => {
+  // create function to delete a bookmark
+  const deleteBookmark = async (id) => {
     // make the delete request
     await fetch(URL + id, {
         method: "delete"
     })
     // update the list of bookmarks
     getBookmark()
-}
+  }
+
+  // create function to delete all bookmarks
+  const clearBookmarks = async () => {
+    for (let i=0; i<bookmark.length; i++) {
+      await fetch(URL + bookmark[i]._id, {method: "delete"})
+    }
+    getBookmark()
+  }
 
   // a useEffect to make a call to getBookmark when page loads
   useEffect(() => {
@@ -68,7 +76,7 @@ const deleteBookmark = async (id) => {
     <main>
       <Routes>
         <Route path="/" element={
-        <Index bookmark={bookmark} createBookmark={createBookmark}/>
+        <Index bookmark={bookmark} createBookmark={createBookmark} deleteAll={clearBookmarks}/>
         } />
         <Route path="/bookmark/:id" element={
         <Show bookmark={bookmark} updateBookmark={updateBookmark} deleteBookmark={deleteBookmark}/>} 

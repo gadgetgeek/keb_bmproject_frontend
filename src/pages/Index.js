@@ -3,42 +3,48 @@ import {Link} from "react-router-dom"
 
 const Index = (props) => {
 
-     // state to hold form data
+  // state to hold form data
   const [newForm, setNewForm] = useState({
     title: "",
     url: ""
-})
+  })
 
-//handleChange function to sync input with state
-const handleChange = (event) => {
+  //handleChange function to sync input with state
+  const handleChange = (event) => {
     // make a copy of state
     const newState = {...newForm}
     // update the newState
     newState[event.target.name] = event.target.value
     // update the state
     setNewForm(newState)
-}
+  }
 
-// handleSubmit function for when form is submitted
-const handleSubmit = (event) => {
+  // handleSubmit function for when form is submitted
+  const handleSubmit = (event) => {
     // prevent the page from refreshing
     event.preventDefault()
     // pass the form data to createPeople function
     props.createBookmark(newForm)
     // reset the form to empty
     setNewForm({
-        title: "",
+        name: "",
         url: ""
-  })
-}
+    })
+  }
 
-const form = (
+  const allBookmarks = []
+  const randomBookmark = () => {
+    const random = Math.floor(Math.random()*allBookmarks.length)
+    window.location.href = allBookmarks[random]
+  }
+
+  const form = (
     <form onSubmit={handleSubmit}>
       <input
         type="text"
         value={newForm.name}
         name="title"
-        placeholder="name"
+        placeholder="Website"
         onChange={handleChange}
       />
       <input
@@ -49,6 +55,7 @@ const form = (
         onChange={handleChange}
       />
       <input type="submit" value="Add BM" />
+      <button type='button' onClick={randomBookmark}>Random</button>
     </form>
   );
 
@@ -57,6 +64,7 @@ const form = (
       <section>
         {form}
         {props.bookmark.map((bookmark) => {
+          allBookmarks.push(`https://${bookmark.url}`)
           return (
             <div key={bookmark._id} className="bookmark">
                 <a href={`https://${bookmark.url}`} alt={bookmark.url}>{bookmark.title}</a>
@@ -65,6 +73,7 @@ const form = (
             </div>
           );
         })}
+        <button type='button' onClick={props.deleteAll} className='clear'>Clear</button>
       </section>
     );
   } else {
@@ -76,4 +85,5 @@ const form = (
     );
   }
 }
- export default Index
+
+export default Index
