@@ -35,7 +35,7 @@
       
   }
 
-  input {
+  input, button {
       padding: 15px;
       margin: 6px;
       box-shadow: 5px 5px 3px rgb(112, 90, 112);

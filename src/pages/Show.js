@@ -18,7 +18,7 @@ const Show = (props) => {
           const book = bookmark.find((b) => b._id === id);
           setEditForm(book)
       }
-  }, [props.bookmark])
+  }, [props.bookmark, bookmark, id])
 
   if (props.bookmark) {
     // grab the target person from the bookmark array
@@ -65,7 +65,7 @@ const Show = (props) => {
           placeholder="URL"
           onChange={handleChange}
         />
-        <input type="submit" value="Update Bookmark" />
+        <input type="submit" value="UPDATE" />
       </form>
     );
 
