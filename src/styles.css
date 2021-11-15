@@ -35,7 +35,7 @@
       
   }
 
-  input, button {
+  input, button, .clear {
       padding: 15px;
       margin: 6px;
       box-shadow: 5px 5px 3px rgb(112, 90, 112);
@@ -45,10 +45,15 @@
       
       border-style: solid;
       margin: auto;
-      width: 50%;
+      width: 70%;
       padding: 5px;
       font-size: 1.2em;
       border-radius: 5px;
       border-color: indigo;
       box-shadow: 5px 5px 3px rgb(140, 115, 158);
+  }
+
+  .clear, .delete {
+    margin-top: 5vh;
+    background-color: coral;
   }

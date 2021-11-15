@@ -27,7 +27,7 @@ const Index = (props) => {
     props.createBookmark(newForm)
     // reset the form to empty
     setNewForm({
-        title: "",
+        name: "",
         url: ""
     })
   }
@@ -44,7 +44,7 @@ const Index = (props) => {
         type="text"
         value={newForm.name}
         name="title"
-        placeholder="name"
+        placeholder="Website"
         onChange={handleChange}
       />
       <input
@@ -73,7 +73,7 @@ const Index = (props) => {
             </div>
           );
         })}
-        <button type='button' onClick={props.deleteAll}>Clear</button>
+        <button type='button' onClick={props.deleteAll} className='clear'>Clear</button>
       </section>
     );
   } else {
