@@ -12,6 +12,7 @@ This is the frontend for the Bookmark'd App, utilizing API from the [MongoDB-Her
 - HTML5
 - CSS
 - React JS
+- Netlify
 
 ## Router Route Table
 
