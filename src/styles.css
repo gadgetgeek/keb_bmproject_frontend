@@ -1,0 +1,54 @@
+.App{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTif5Z9J1o9jWwV97KciT7BrOZ1iYnbGYJnGA&usqp=CAU");
+    margin: auto;
+    text-align: center;
+    width: 90%;
+    height: 700px;
+}
+
+
+.nav {
+    display: block;
+    background-color: rgb(96, 96, 131);
+    box-shadow: 10px 10px 8px rgb(74, 56, 80);
+    margin: 0%;
+    padding: 15px;
+    align-content: center;
+  }
+  
+  div.header {
+      color: white;
+      font-size: 1.8em;
+     
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  form {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0;
+      
+  }
+
+  input {
+      padding: 15px;
+      margin: 6px;
+      box-shadow: 5px 5px 3px rgb(112, 90, 112);
+  }
+
+  div.bookmark{
+      
+      border-style: solid;
+      margin: auto;
+      width: 50%;
+      padding: 5px;
+      font-size: 1.2em;
+      border-radius: 5px;
+      border-color: indigo;
+      box-shadow: 5px 5px 3px rgb(140, 115, 158);
+  }
