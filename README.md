@@ -50,3 +50,7 @@ App
 - As a user, I can delete all bookmarks so I can make a new list entirely.
 - As a user, I can click to go to the site of a random bookmark.
 
+## Development Notes
+- ClickUp vs Trello
+- Git repositories and adding collaborators
+- Troubleshooting npm i, .env, and start scripts
