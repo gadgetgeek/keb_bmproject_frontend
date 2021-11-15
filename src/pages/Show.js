@@ -18,9 +18,9 @@ const Show = (props) => {
           const book = bookmark.find((b) => b._id === id);
           setEditForm(book)
       }
-  }, [props.bookmark])
+  }, [bookmark, id])
 
-  if (props.bookmark) {
+  if (bookmark) {
     // grab the target person from the bookmark array
     const book = bookmark.find((b) => b._id === id);
     
